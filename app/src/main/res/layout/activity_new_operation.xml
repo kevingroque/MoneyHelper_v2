@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.roque.com.moneyhelper2.NewOperationActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_title2"
+        android:layout_margin="12dp"
+        android:textColor="#000"
+        android:paddingTop="12dp"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/newMonto"
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/newoperation_monto"
+            android:layout_margin="12dp"
+            android:inputType="numberDecimal"/>
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_margin="12dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/ingreso"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newo_txt_ingreso"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:layout_marginTop="12dp"
+                android:id="@+id/egreso"
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newo_txt_egreso"
+                android:layout_weight="1"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/tipo_cuenta"
+        android:layout_margin="12dp"
+        android:entries="@array/tipo_cuenta"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </Spinner>
+
+    <Button
+        android:layout_gravity="end"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:id="@+id/registar"
+        android:onClick="newRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/btn_newoperation_registrar"
+        android:textSize="20sp" />
+</LinearLayout>

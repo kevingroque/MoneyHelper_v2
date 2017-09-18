@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.roque.com.moneyhelper2.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="@string/main_title1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/saldoActualAhorro"
+            android:layout_below="@+id/title"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:text="@string/main_text_saldoAhorro"/>
+
+        <TextView
+            android:id="@+id/montoAhorro"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/title"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            tools:text="S/.1200"/>
+
+        <TextView
+            android:id="@+id/saldoActualCredito"
+            android:layout_below="@+id/saldoActualAhorro"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:text="@string/main_text_saldoCredito"/>
+
+        <TextView
+            android:id="@+id/montoCredito"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/saldoActualAhorro"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            tools:text="S/.1200"/>
+
+        <TextView
+            android:id="@+id/saldoActualEfectivo"
+            android:padding="15dp"
+            android:layout_below="@+id/saldoActualCredito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:text="@string/main_text_saldoEfectivo"/>
+
+        <TextView
+            android:id="@+id/montoEfectivo"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/saldoActualCredito"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            tools:text="S/.1200"/>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_below="@+id/saldoActualEfectivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:text="@string/main_title2"
+            android:gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            android:layout_below="@+id/title2"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/margin_fab"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:onClick="addItem"/>
+
+</android.support.design.widget.CoordinatorLayout>
